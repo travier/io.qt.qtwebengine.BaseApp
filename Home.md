@@ -17,6 +17,7 @@ Any branch based on a non-EOL base runtime should be supported. Branches are con
 |`branch/5.15-23.08`|5.15-23.08    |5.15.x-lts          |
 |`branch/6.5`       |6.5           |6.5.x               |
 |`branch/6.6`       |6.6           |6.6.x               |
+|`branch/6.7`       |6.7           |6.7.x               |
 
 ## Features
 
