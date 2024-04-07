@@ -46,14 +46,8 @@ Applications are expected to set the environment variable `QTWEBENGINE_DICTIONAR
 Support for spawning sandboxed Flatpak instances is included, and will be used by QtWebEngine to sandbox Chromium's
 render processes.
 
-This feature requires a D-Bus session bus socket in the Flatpak sandbox, but it doesn't need unfiltered access to the session
-bus, and will work fine without any extra [xdg-dbus-proxy](https://github.com/flatpak/xdg-dbus-proxy) permissions.
-
-Important to note that without a working session bus socket, QtWebEngine process will fail to start.
-
-During packaging of a Flatpak application there is no session bus socket in the sandbox, so if the build process
-needs running QtWebEngine, then it will fail.  
-The workaround is to disable sandboxing like this:
+During build process, if an application needs a running QtWebengine 
+process sandboxing must be disabled:
 
 ```yaml
 build-options:
